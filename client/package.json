@@ -2,16 +2,23 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --testMatch=$(pwd)/test/*.test.js --env=jsdom",
+    "testCI": "CI=true react-scripts test --testMatch=$(pwd)/test/*.test.js --env=jsdom",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --testMatch=$(pwd)/test/*.js --env=jsdom",
-    "testCI": "CI=true react-scripts test --testMatch=$(pwd)/test/*.js --env=jsdom",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "ajv": "^6.2.1",
+    "chai": "^4.1.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "react-test-renderer": "^16.2.0"
   }
 }
