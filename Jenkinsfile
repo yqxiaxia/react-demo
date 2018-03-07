@@ -1,9 +1,12 @@
 node{
     checkout scm
-    stage('test'){
-        sh "echo 'test'"
-    }
+    sh 'npm install'
+
     stage('build'){
-        sh "echo 'build'"
+            sh "echo 'build'"
+        }
+    stage('test'){
+        sh "npm run pip"
     }
+
 }
