@@ -1,8 +1,9 @@
-node('docker') {
+node{
     checkout scm
-    stage('Build') {
-        docker.image('node:8.1.4').inside {
-            sh 'npm --version'
-        }
+    stage('test'){
+        sh "echo 'test done'"
+    }
+    stage('build'){
+        sh "echo 'build done'"
     }
 }
