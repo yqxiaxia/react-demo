@@ -1,9 +1,9 @@
 node{
     checkout scm
     stage('test'){
-        sh "echo 'test done'"
+        sh "echo 'test'"
     }
     stage('build'){
-        sh "echo 'build done'"
+        sh "echo 'build'"
     }
 }
