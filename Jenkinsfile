@@ -4,6 +4,7 @@ node{
     }
     stage('test'){
         sh "echo 'test done'"
+        sh 'node --version'
     }
     stage('build'){
         sh "echo 'build done'"
