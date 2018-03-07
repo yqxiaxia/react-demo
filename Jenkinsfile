@@ -1,10 +1,8 @@
-pipeline {
-    agent { docker 'node:8.1.4' }
-    stages {
-        stage('build') {
-            steps {
-                sh 'npm --version'
-            }
+node('docker') {
+    checkout scm
+    stage('Build') {
+        docker.image('node:8.1.4').inside {
+            sh 'npm --version'
         }
     }
 }
