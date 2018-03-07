@@ -1,12 +1,8 @@
-node{
-    stage('git clone'){
-       git url: 'https://github.com/yqxiaxia/react-demo.git'
-    }
-    stage('test'){
-        sh "echo 'test done'"
-        sh 'node --version'
-    }
-    stage('build'){
-        sh "echo 'build done'"
+node('docker') {
+    checkout scm
+    stage('Build') {
+        docker.image('node:8.1.4').inside {
+            sh 'npm --version'
+        }
     }
 }
