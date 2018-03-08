@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test": "react-scripts test --testMatch=$(pwd)/test/*.test.js --env=jsdom",
-    "testCI": "CI=true react-scripts test --testMatch=$(pwd)/test/*.test.js --env=jsdom",
+    "test": "react-scripts test --testMatch=$(pwd)/test/*.test.js",
+    "testCI": "CI=true react-scripts test --testMatch=$(pwd)/test/*.test.js",
     "build-css": "node-sass-chokidar src/stylesheets/ -o src/stylesheets/",
     "watch-css": "npm run build-css && node-sass-chokidar src/stylesheets/ -o src/stylesheets/ --watch --recursive",
     "start-js": "react-scripts start",
