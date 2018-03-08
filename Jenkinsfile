@@ -12,9 +12,9 @@ pipeline{
     stage('test'){
         sh "yarn run testCI"
     }
-    stage('Deploy for development') {
+    stage('Deploy for dev') {
         when {
-            branch 'development'
+            branch 'dev'
         }
         steps {
             echo 'Deploy for development'
