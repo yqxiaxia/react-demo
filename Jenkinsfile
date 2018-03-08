@@ -3,12 +3,12 @@ node{
          checkout scm
      }
      stage('install') {
-         sh "npm install"
+         sh "yarn install"
      }
      stage('build'){
-         sh "npm run build"
+         sh "yarn run build"
          }
      stage('test'){
-         sh "npm run testCI"
+         sh "yarn run testCI"
      }
  }
